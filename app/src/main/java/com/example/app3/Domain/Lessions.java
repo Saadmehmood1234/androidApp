@@ -1,6 +1,8 @@
 package com.example.app3.Domain;
 
-public class Lessions {
+import java.io.Serializable;
+
+public class Lessions implements Serializable {
     private String title;
     private String duration;
     private String link;
