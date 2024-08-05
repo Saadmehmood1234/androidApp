@@ -26,7 +26,6 @@ public class LessonsAdapter extends RecyclerView.Adapter<LessonsAdapter.Viewhold
     public LessonsAdapter(ArrayList<Lessions> list) {
         this.list = list;
     }
-
     @NonNull
     @Override
     public LessonsAdapter.Viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -35,12 +34,10 @@ public class LessonsAdapter extends RecyclerView.Adapter<LessonsAdapter.Viewhold
 
         return new Viewholder(binding);
     }
-
     @Override
     public void onBindViewHolder(@NonNull LessonsAdapter.Viewholder holder, @SuppressLint("RecyclerView") int position) {
           holder.binding.titleTxt.setText(list.get(position).getTitle());
           holder.binding.duration.setText(list.get(position).getDuration());
-
           int resId=context.getResources().getIdentifier(list.get(position).getPicPath(),"drawable",context.getPackageName());
         Glide.with(context)
                 .load(resId)
@@ -59,7 +56,6 @@ public class LessonsAdapter extends RecyclerView.Adapter<LessonsAdapter.Viewhold
             }
         });
     }
-
     @Override
     public int getItemCount() {
         return list.size();

@@ -103,9 +103,9 @@ public class MainActivity extends AppCompatActivity {
 
 private ArrayList<Workout> getData(){
         ArrayList<Workout> list=new ArrayList<>();
-        list.add(new Workout("Running","Running is a great cardiovascular exercise that helps improve overall health and fitness. It boosts your mood and increases stamina.","pic_1",160,"9 min",getLession_1()));
-        list.add(new Workout("Stretching","Stretching helps improve flexibility and range of motion. It is crucial for injury prevention and muscle recovery after workouts.","pic_2",230,"85 min",getLession_2()));
-        list.add(new Workout("Yoga","Yoga combines physical postures, breathing exercises, and meditation. It enhances mental clarity, reduces stress, and promotes physical well-being.","pic_3",180,"65 min",getLession_3()));
+        list.add(new Workout("Laptop","Running is a great cardiovascular exercise that helps improve overall health and fitness. It boosts your mood and increases stamina.","laptop1",160,"Starting from 530$",getLession_1()));
+        list.add(new Workout("Mobile","Stretching helps improve flexibility and range of motion. It is crucial for injury prevention and muscle recovery after workouts.","mobile1",230,"Starting from 100$",getLession_2()));
+        list.add(new Workout("Gadgets","Yoga combines physical postures, breathing exercises, and meditation. It enhances mental clarity, reduces stress, and promotes physical well-being.","gadget1",180,"Starting from 10$",getLession_3()));
 
     return list;
 

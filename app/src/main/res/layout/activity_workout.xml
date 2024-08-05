@@ -77,7 +77,7 @@
           android:layout_height="wrap_content"
           android:text="title"
           android:textStyle="bold"
-          android:textColor="@color/white"
+          android:textColor="@color/orange"
           android:textSize="23dp"
           android:layout_marginStart="16dp"/>
       <LinearLayout
@@ -95,7 +95,7 @@
             android:layout_height="wrap_content"
 
             android:text="20 min"
-            android:textColor="@color/white"
+            android:textColor="@color/orange"
             android:textSize="14sp"/>
 
         <TextView
@@ -110,7 +110,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="14sp"
-            android:textColor="@color/white"
+            android:textColor="@color/orange"
             android:text="Excercise" />
 
         <TextView
@@ -124,7 +124,7 @@
             android:id="@+id/KcalTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
+            android:textColor="@color/orange"
             android:textSize="14sp"
             android:text="170 Kcal" />
       </LinearLayout>
@@ -136,14 +136,14 @@
           android:layout_margin="16dp"
           android:text="description"
 
-          android:textColor="@color/white" />
+          android:textColor="@color/orange" />
 
       <TextView
           android:id="@+id/Excer"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:text="Exercise"
-          android:textColor="@color/white"
+          android:textColor="@color/orange"
           android:textSize="18sp"
           android:layout_marginStart="16dp"
           android:textStyle="bold"/>
@@ -168,7 +168,7 @@
       android:layout_marginBottom="32dp"
       android:background="@drawable/orange_bg"
       style="@android:style/Widget.Button"
-      android:textColor="@color/white"
+      android:textColor="@color/orange"
       android:text="Start Workout"
       android:textStyle="bold"
       android:textSize="18sp"
