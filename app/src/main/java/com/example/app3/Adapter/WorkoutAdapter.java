@@ -40,9 +40,9 @@ public class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.Viewhold
         Glide.with(holder.itemView.getContext())
                 .load((resId))
                 .into(holder.binding.pic);
-        holder.binding.ExcersizeTxt.setText(list.get(position).getLessions().size()+"Excercise");
-        holder.binding.KcalTxt.setText(list.get(position).getKcal()+"Kcal");
-        holder.binding.duration.setText(list.get(position).getDurationAll());
+//        holder.binding.ExcersizeTxt.setText(list.get(position).getLessions().size());
+//        holder.binding.KcalTxt.setText(list.get(position).getKcal());
+//        holder.binding.duration.setText(list.get(position).getDurationAll());
 
         holder.binding.getRoot().setOnClickListener(view -> {
             Intent intent=new Intent(context, WorkoutActivity.class);
