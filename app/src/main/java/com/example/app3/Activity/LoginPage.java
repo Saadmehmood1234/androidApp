@@ -146,8 +146,8 @@ public class LoginPage extends AppCompatActivity {
 
     private void updateUI(FirebaseUser user) {
         if (user != null) {
-            Intent intent = new Intent(LoginPage.this, MainActivity.class);
-            startActivity(intent);
+            Intent splashIntent = SplashScreen.createIntent(this, MainActivity.class);
+            startActivity(splashIntent);
             finish();
         }
     }

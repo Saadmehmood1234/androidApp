@@ -30,16 +30,25 @@ public class ProfilePage extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        binding.PhomeBtn.setOnClickListener(v -> startActivity(new Intent(ProfilePage.this, MainActivity.class)));
+        binding.PhomeTxt.setOnClickListener(v -> startActivity(new Intent(ProfilePage.this, MainActivity.class)));
+
+        binding.PfavourateBtn.setOnClickListener(v -> startActivity(new Intent(ProfilePage.this, FavouratePage.class)));
+        binding.PfavourateTxt.setOnClickListener(v -> startActivity(new Intent(ProfilePage.this, FavouratePage.class)));
+
+        binding.PhomeBtn.setOnClickListener(v -> startActivity(new Intent(ProfilePage.this, CartPage.class)));
+        binding.PcartTxt.setOnClickListener(v -> startActivity(new Intent(ProfilePage.this, CartPage.class)));
 
         logoutBtn = binding.logoutBtn;
         logoutBtn.setOnClickListener(v -> {
             SharedPreferences.Editor editor = getSharedPreferences(PREFS_NAME, MODE_PRIVATE).edit();
             editor.putBoolean("isLoggedIn", false);
             editor.apply();
-            Intent intent = new Intent(ProfilePage.this, IntroActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(intent);
+            Intent splashIntent = SplashScreen.createIntent(this,IntroActivity.class);
+            splashIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(splashIntent);
             finish();
+
         });
     }
 }

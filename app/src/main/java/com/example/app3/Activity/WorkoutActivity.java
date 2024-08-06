@@ -45,9 +45,10 @@ public class WorkoutActivity extends AppCompatActivity{
         });
 
         binding.titleTxt.setText(workout.getTitle());
-        binding.ExcersizeTxt.setText(workout.getLessions().size()+"Exercise");
-        binding.KcalTxt.setText(workout.getKcal()+"Kcal");
-        binding.duration.setText(workout.getDurationAll());
+//        binding.brandsTxt.setText(workout.getLessions().size());
+        binding.latestTxt.setText(workout.getLatest());
+        binding.rating.setText(workout.getKcal()+"+ rating");
+        binding.priceTxt.setText(workout.getDurationAll());
         binding.descriptionTxt.setText(workout.getDescription());
 
         binding.view3.setLayoutManager(new LinearLayoutManager(WorkoutActivity.this,LinearLayoutManager.VERTICAL,false));

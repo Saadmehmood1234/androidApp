@@ -248,6 +248,11 @@ public class MainActivity extends AppCompatActivity {
 
         binding.view1.setLayoutManager(new LinearLayoutManager(MainActivity.this, LinearLayoutManager.HORIZONTAL, false));
         binding.view1.setAdapter(new WorkoutAdapter(getData()));
+        binding.favourateBtn.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, FavouratePage.class)));
+        binding.favoutateTxt.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, FavouratePage.class)));
+
+        binding.cartBtn.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, CartPage.class)));
+        binding.cartTxt.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, CartPage.class)));
         binding.profileBtn.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, ProfilePage.class)));
         binding.profilePic.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, ProfilePage.class)));
         binding.profileTxt.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, ProfilePage.class)));
@@ -255,9 +260,9 @@ public class MainActivity extends AppCompatActivity {
 
     private ArrayList<Workout> getData(){
         ArrayList<Workout> list=new ArrayList<>();
-        list.add(new Workout("Laptop","Running is a great cardiovascular exercise that helps improve overall health and fitness. It boosts your mood and increases stamina.","laptop1",160,"Starting from 530$",getLession_1()));
-        list.add(new Workout("Mobile","Stretching helps improve flexibility and range of motion. It is crucial for injury prevention and muscle recovery after workouts.","mobile1",230,"Starting from 100$",getLession_2()));
-        list.add(new Workout("Gadgets","Yoga combines physical postures, breathing exercises, and meditation. It enhances mental clarity, reduces stress, and promotes physical well-being.","gadget1",180,"Starting from 10$",getLession_3()));
+        list.add(new Workout("Laptop","Discover our extensive range of laptops designed to meet every need. From powerful gaming laptops to sleek ultrabooks, we have the perfect device for you. Enjoy cutting-edge technology, stunning displays, and long battery life","laptop1",4.1,"Starting from 530$","Latest Laptop",getLession_1()));
+        list.add(new Workout("Mobile","Explore the latest mobile phones with innovative features and stylish designs. Our collection includes the newest smartphones from top brands, offering advanced cameras, high-speed processors, and vibrant displays","mobile1",4.3,"Starting from 100$","Latest SmartPhones",getLession_2()));
+        list.add(new Workout("Gadgets","Enhance your tech experience with our wide selection of accessories. From protective cases and screen protectors to chargers and power banks, we have everything you need. Discover high-quality headphones, portable speakers, and stylish smartwatch bands. ","gadget1",3.9,"Starting from 10$","Latest Accessories",getLession_3()));
 
         return list;
 
@@ -265,9 +270,9 @@ public class MainActivity extends AppCompatActivity {
 
     private ArrayList<Lessions> getLession_1(){
         ArrayList<Lessions> list=new ArrayList<>();
-        list.add(new Lessions("laptop2","https://www.amazon.in/Dell-Vostro-Metal-i5-1235U-35-56Cms/dp/B0BQJ7WR2R?ref=dlx_great_dg_dcl_B0BQJ7WR2R_dt_sl8_49","₹48,990","Dell 15 Thin & Light Laptop"));
-        list.add(new Lessions("laptop3","https://www.amazon.in/Lenovo-IdeaPad-i5-12450H-35-5cm-83EQ005VIN/dp/B0D6MPVN7B?ref=dlx_great_dg_dcl_B0D6MPVN7B_dt_sl8_49","₹50,490","Lenovo IdeaPad Slim 3"));
-        list.add(new Lessions("laptop4","https://www.amazon.in/ASUS-Vivobook-IntelCore-Fingerprint-X1404ZA-NK321WS/dp/B0CCP9PH92?ref=dlx_great_dg_dcl_B0CCP9PH92_dt_sl8_49","₹33,990","ASUS Vivobook"));
+        list.add(new Lessions("laptop2","Dell-Vostro-Metal-i5-1235U-35-56Cms/dp/B0BQJ7WR2R?ref=dlx_great_dg_dcl_B0BQJ7WR2R_dt_sl8_49","₹48,990","Dell 15 Thin & Light Laptop"));
+        list.add(new Lessions("laptop3","Lenovo-IdeaPad-i5-12450H-35-5cm-83EQ005VIN/dp/B0D6MPVN7B?ref=dlx_great_dg_dcl_B0D6MPVN7B_dt_sl8_49","₹50,490","Lenovo IdeaPad Slim 3"));
+        list.add(new Lessions("laptop4","ASUS-Vivobook-IntelCore-Fingerprint-X1404ZA-NK321WS/dp/B0CCP9PH92?ref=dlx_great_dg_dcl_B0CCP9PH92_dt_sl8_49","₹33,990","ASUS Vivobook"));
         return list;
 
     }
@@ -284,9 +289,9 @@ public class MainActivity extends AppCompatActivity {
 
     private ArrayList<Lessions> getLession_3(){
         ArrayList<Lessions> list=new ArrayList<>();
-        list.add(new Lessions("headphone3","https://www.amazon.in/Amazon-Basics-Gaming-Headphones-Over-Ear/dp/B0C6TVQ2HZ/ref=sr_1_1?_encoding=UTF8&content-id=amzn1.sym.5596da1f-db97-4dea-a8dd-31000e776f9d&dib=eyJ2IjoiMSJ9.KH7k55O7H4AL6LL_R7kE__oUtxTNOMiVh7LouHt5BKsD_oXd7fOA7IZ-I0Evhb_Imt3E_IJmSsTZnO6VKpHl337umIo-gMpK_i2lZJGkj8V7ihyo7L-yvdCVeWVheS9urm42G1CIyv0E2odoJu8iqT5a_VEiIQcddZY81khbuQsneutBqoWq_mswDl3D1SYiLGvQ2nwuwKKek3i0Lydxkk8m7NJh_hw6yk21bkBYLJA0bRCeHCbzzaXQI78PcljZEvmeO2Dj_D37gx_edyLzjo0opzblKe1nS7ymFeQusps.XUT4zHrnGFJG99nXxJYOchISD7ydpvd1jPYzD3Fas2I&dib_tag=se&keywords=gaming+accessories&pd_rd_r=317f7bb5-6b39-4b65-84fa-ebcc7e4a062d&pd_rd_w=numZw&pd_rd_wg=SLVhd&pf_rd_p=5596da1f-db97-4dea-a8dd-31000e776f9d&pf_rd_r=X02YXQNSZB96SNB3CYGM&qid=1722946120&refinements=p_n_format_browse-bin%3A30678577031&s=computers&sr=1-1","190$","Amazon Basics 7.1 USB Gaming Headphones "));
+        list.add(new Lessions("headphone3","https://www.amazon.in/Amazon-Basics-Gaming-Headphones-Over-Ear/dp/B0C6TVQ2HZ/ref=sr_1_1?_encoding=UTF8&content-id=amzn1.sym.5596da1f-db97-4dea-a8dd-31000e776f9d&dib=eyJ2IjoiMSJ9.KH7k55O7H4AL6LL_R7kE__oUtxTNOMiVh7LouHt5BKsD_oXd7fOA7IZ-I0Evhb_Imt3E_IJmSsTZnO6VKpHl337umIo-gMpK_i2lZJGkj8V7ihyo7L-yvdCVeWVheS9urm42G1CIyv0E2odoJu8iqT5a_VEiIQcddZY81khbuQsneutBqoWq_mswDl3D1SYiLGvQ2nwuwKKek3i0Lydxkk8m7NJh_hw6yk21bkBYLJA0bRCeHCbzzaXQI78PcljZEvmeO2Dj_D37gx_edyLzjo0opzblKe1nS7ymFeQusps.XUT4zHrnGFJG99nXxJYOchISD7ydpvd1jPYzD3Fas2I&dib_tag=se&keywords=gaming+accessories&pd_rd_r=317f7bb5-6b39-4b65-84fa-ebcc7e4a062d&pd_rd_w=numZw&pd_rd_wg=SLVhd&pf_rd_p=5596da1f-db97-4dea-a8dd-31000e776f9d&pf_rd_r=X02YXQNSZB96SNB3CYGM&qid=1722946120&refinements=p_n_format_browse-bin%3A30678577031&s=computers&sr=1-1","190$","Amazon Basics 7.1 \nUSB Gaming Headphones "));
         list.add(new Lessions("camera","https://www.amazon.in/Sony-ILCE-7M4K-Full-Frame-Interchangeable-Lens-Mirrorless/dp/B09SB2P8J5?ref=dlx_great_dg_dcl_B09SB2P8J5_dt_sl8_49&th=1"," ₹2,19,990","Sony Alpha ILCE-7M4K "));
-        list.add(new Lessions("keyboard","https://www.amazon.in/dp/B0CFF1XMT4/ref=sspa_dk_detail_2?psc=1&pd_rd_i=B0CFF1XMT4&pd_rd_w=sygfL&content-id=amzn1.sym.9f1cb690-f0b7-44de-b6ff-1bad1e37d3f0&pf_rd_p=9f1cb690-f0b7-44de-b6ff-1bad1e37d3f0&pf_rd_r=FGN00EYRA97Q9H9FM5GJ&pd_rd_wg=EiKSE&pd_rd_r=83416e1f-2dce-4840-9980-02487220a701&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM","₹2,399","ASUS Marshmallow Kw100 Keyboard"));
+        list.add(new Lessions("keyboard","https://www.amazon.in/dp/B0CFF1XMT4/ref=sspa_dk_detail_2?psc=1&pd_rd_i=B0CFF1XMT4&pd_rd_w=sygfL&content-id=amzn1.sym.9f1cb690-f0b7-44de-b6ff-1bad1e37d3f0&pf_rd_p=9f1cb690-f0b7-44de-b6ff-1bad1e37d3f0&pf_rd_r=FGN00EYRA97Q9H9FM5GJ&pd_rd_wg=EiKSE&pd_rd_r=83416e1f-2dce-4840-9980-02487220a701&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM","₹2,399","ASUS Marshmallow\n Kw100 Keyboard"));
         list.add(new Lessions("earpod2","https://www.amazon.in/OnePlus-Wireless-Bluetooth-Cancellation-charging/dp/B0D7HZ3KK9/?_encoding=UTF8&pd_rd_w=y1q4V&content-id=amzn1.sym.ec32926d-65f2-4b6d-966a-5229b3e5905e&pf_rd_p=ec32926d-65f2-4b6d-966a-5229b3e5905e&pf_rd_r=X02YXQNSZB96SNB3CYGM&pd_rd_wg=iSFMo&pd_rd_r=42aabed3-f3b2-49d6-a48a-056c2c87a3b5&ref_=pd_hp_d_btf_dealz_rd"," ₹3,298","OnePlus Nord Buds 3 Pro"));
         return list;
 

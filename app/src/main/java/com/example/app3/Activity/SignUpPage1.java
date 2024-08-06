@@ -93,9 +93,8 @@ public class SignUpPage1 extends AppCompatActivity {
     private void updateUI(FirebaseUser user) {
         if (user != null) {
             Toast.makeText(SignUpPage1.this, "Sign Up Successful", Toast.LENGTH_SHORT).show();
-            // Navigate to the main activity or another appropriate activity
-            Intent intent = new Intent(SignUpPage1.this, MainActivity.class);
-            startActivity(intent);
+            Intent splashIntent = SplashScreen.createIntent(this, MainActivity.class);
+            startActivity(splashIntent);
             finish();
         } else {
             Toast.makeText(SignUpPage1.this, "Sign Up Failed", Toast.LENGTH_SHORT).show();

@@ -90,11 +90,11 @@
           app:layout_constraintTop_toBottomOf="@+id/titleTxt">
 
         <TextView
-            android:id="@+id/duration"
+            android:id="@+id/priceTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:text="20 min"
+            android:text="100$"
             android:textColor="@color/orange"
             android:textSize="14sp"/>
 
@@ -106,12 +106,12 @@
             android:text=" . " />
 
         <TextView
-            android:id="@+id/ExcersizeTxt"
+            android:id="@+id/brandsTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="14sp"
             android:textColor="@color/orange"
-            android:text="Excercise" />
+            android:text="All Brands" />
 
         <TextView
             android:id="@+id/textView18"
@@ -121,12 +121,12 @@
             android:text=" . " />
 
         <TextView
-            android:id="@+id/KcalTxt"
+            android:id="@+id/rating"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/orange"
             android:textSize="14sp"
-            android:text="170 Kcal" />
+            android:text="4" />
       </LinearLayout>
 
       <TextView
@@ -139,10 +139,10 @@
           android:textColor="@color/orange" />
 
       <TextView
-          android:id="@+id/Excer"
+          android:id="@+id/latestTxt"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:text="Latest Gadgets"
+          android:text="Latest Products"
           android:textColor="@color/orange"
           android:textSize="18sp"
           android:layout_marginStart="16dp"

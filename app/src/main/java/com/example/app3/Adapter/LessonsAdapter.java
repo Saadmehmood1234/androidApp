@@ -37,7 +37,7 @@ public class LessonsAdapter extends RecyclerView.Adapter<LessonsAdapter.Viewhold
     @Override
     public void onBindViewHolder(@NonNull LessonsAdapter.Viewholder holder, @SuppressLint("RecyclerView") int position) {
           holder.binding.titleTxt.setText(list.get(position).getTitle());
-          holder.binding.duration.setText(list.get(position).getDuration());
+          holder.binding.priceTxt.setText(list.get(position).getDuration());
           int resId=context.getResources().getIdentifier(list.get(position).getPicPath(),"drawable",context.getPackageName());
         Glide.with(context)
                 .load(resId)
@@ -45,8 +45,8 @@ public class LessonsAdapter extends RecyclerView.Adapter<LessonsAdapter.Viewhold
         holder.binding.getRoot().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent appIntent=new Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube:"+list.get(position).getLink()));
-                Intent webIntent=new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.youtube.com/watch?v="+list.get(position).getLink()));
+                Intent appIntent=new Intent(Intent.ACTION_VIEW, Uri.parse("amazon://www.amazon.in/"+list.get(position).getLink()));
+                Intent webIntent=new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.amazon.in/"+list.get(position).getLink()));
                 try {
                   context.startActivity(appIntent);
                 }

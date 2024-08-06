@@ -7,16 +7,18 @@ public class Workout implements Serializable {
     private String title;
     private String description;
     private String picPath;
-    private int kcal;
+    private double kcal;
     private String durationAll;
+    private String latest;
     private ArrayList<Lessions> lessions;
 
-    public Workout(String title, String description, String picPath, int kcal, String durationAll, ArrayList<Lessions> lessions) {
+    public Workout(String title, String description, String picPath, double kcal, String durationAll,String latest, ArrayList<Lessions> lessions) {
         this.title = title;
         this.description = description;
         this.picPath = picPath;
         this.kcal = kcal;
         this.durationAll = durationAll;
+        this.latest=latest;
         this.lessions = lessions;
     }
 
@@ -44,7 +46,7 @@ public class Workout implements Serializable {
         this.picPath = picPath;
     }
 
-    public int getKcal() {
+    public double getKcal() {
         return kcal;
     }
 
@@ -58,6 +60,14 @@ public class Workout implements Serializable {
 
     public void setDurationAll(String durationAll) {
         this.durationAll = durationAll;
+    }
+
+    public String getLatest() {
+        return latest;
+    }
+
+    public void setLatest(String latest) {
+        this.latest= latest;
     }
 
     public ArrayList<Lessions> getLessions() {
